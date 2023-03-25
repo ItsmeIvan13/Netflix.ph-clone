@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion{
+  width: 1000px;
+  
+}
+
+
+.item{
+  background-color: #2d2d2d;
+  margin-bottom: 10px;
+  padding: 25px 25px;
+ 
+
+}
+
+
+
+.title{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.content{
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0,1,0,1);
+  font-size: 24px;
+  
+}
+
+.content.show{
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1,0,1,0);
+  padding-top: 10px;
+}
+
+.started{
+  background-color: #e50914;
+}
+
+.brder_color {
+  background-color: #232323;
+}
+
+.foot_text{
+  color: #96b3b3;
+}
+
+select{
+  background-color: #0f0f0f;
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* styles for small screens */
+  .accordion{
+    width: 500px;
+    
+  }
+
+  .title{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .content{
+    color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0,1,0,1);
+    font-size: 20px;
+    
+  }
+}
